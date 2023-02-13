@@ -15,7 +15,7 @@ export default function App() {
             <Navigator
                 screenOptions={{
                     headerStyle: {
-                        backgroundColor: "#f4511e",
+                        backgroundColor: "blue",
                     },
                     headerTintColor: "#fff",
                     headerTitleStyle: {
