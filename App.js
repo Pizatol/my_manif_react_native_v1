@@ -21,7 +21,7 @@ export default function App() {
                     headerTitleStyle: {
                         fontWeight: "bold",
                     },
-                    headerTitleAlign:"center"
+                    headerTitleAlign:"left"
                 }}
             >
                 <Screen name="Welcome" component={WelcomeScreen} />
