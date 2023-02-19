@@ -2,12 +2,14 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from "./screens/Home";
 import Detail from "./screens/Detail";
 import WelcomeScreen from "./screens/WelcomeScreen";
 
 const { Navigator, Screen } = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
     return (
@@ -15,20 +17,29 @@ export default function App() {
             <Navigator
                 screenOptions={{
                     headerStyle: {
-                        backgroundColor: "blue",
+                        backgroundColor: "#ff9800",
                     },
                     headerTintColor: "#fff",
                     headerTitleStyle: {
                         fontWeight: "bold",
                     },
-                    headerTitleAlign:"left"
+                    headerTitleAlign: "center",
                 }}
             >
                 <Screen name="Welcome" component={WelcomeScreen} />
                 <Screen name="Home" component={Home} />
                 <Screen name="Detail" component={Detail} />
             </Navigator>
+
+            {/* <Tab.Navigator>
+      <Tab.Screen name="Home" component={WelcomeScreen} />
+      <Tab.Screen name="Detail" component={Detail} />
+    </Tab.Navigator>
+     */}
         </NavigationContainer>
+
+   
+
     );
 }
 
